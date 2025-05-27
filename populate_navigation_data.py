@@ -26,8 +26,10 @@ def open_websites(urls, page_timeout=2, load_timeout=5):
         service=Service(GeckoDriverManager().install()),
         options=options
     )
-    # Set the initial page load timeout
+    # Set the initial page load timeout, count_fails and count_success variables
     driver.set_page_load_timeout(page_timeout)
+    count_fails=1 
+    count_success=1
     for url in urls:
         try:
             print(f"Opening: {url}")
