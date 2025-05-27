@@ -51,5 +51,5 @@ def open_websites(urls, page_timeout=2, load_timeout=5):
         # No delay before moving to the next URL
     # driver.quit()
 if __name__ == "__main__":
-    urls = load_urls('urls_sem_test-11k.txt')  # one URL per line
+    urls = load_urls('web_data.txt')  # one URL per line
     open_websites(urls)
