@@ -45,7 +45,7 @@ def open_websites(urls, page_timeout=2, load_timeout=5):
             else:
                 print(f"Successfully loaded: {url}")
                 count_success += 1
-                print(f"Pages which did not finish loading in {load_timeout} seconds: {count_success}")
+                print(f"Count of pages successfully loaded: {count_success}")
         except TimeoutException:
             print(f"Timeout while loading the page: {url}")
         except WebDriverException as e:
