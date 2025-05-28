@@ -16,7 +16,7 @@ def is_page_loaded(driver, timeout=5):
         return driver.execute_script('return document.readyState;') == 'complete'
     except WebDriverException:
         return False
-def open_websites(urls, page_timeout=2, load_timeout=5):
+def open_websites(urls, page_timeout=2, load_timeout=3):
     profile_path = r"/Users/a.f/Library/Application Support/Firefox/Profiles/9zc105ih.test-sem-10k"
     options = Options()
     options.profile = profile_path
